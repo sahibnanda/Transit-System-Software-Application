@@ -2,8 +2,7 @@
 A java software application which mimics a transit system with a functional transit GUI implemented utilizing JavaFX. This project was completed in a group of 5 members in which the scrum framework was heavily emphasized.
 
 =====
-ADD INSTRUCTIONS FOR HOW TO RUN/USE YOUR PROGRAM HERE:
-e.g. What format should we use to input data or add data to events.txt? Anything else we need to know in order to use your program?
+INSTRUCTIONS FOR HOW TO RUN/USE YOUR PROGRAM HERE:
 =====
 To run our program, you must run Events.java which is the interface in which you can input information (the GUI).
 
@@ -51,7 +50,7 @@ Id: "0"
 Once another admin has been added, any of the admins' credentials can be used to access the admin user interactions.
 
 =====
-LIST ALL FEATURES THAT YOU WORKED ON HERE, AND HOW TO INPUT RELEVANT DATA FOR THE FEATURE (IF APPLICABLE)
+LIST ALL FEATURES WORKED ON HERE, AND HOW TO INPUT RELEVANT DATA FOR THE FEATURE
 =====
 
 ===========GENERAL FEATURES===========
@@ -129,6 +128,7 @@ Note:
 - the total revenue report for admins is updated after each day is completed. For example, data for day 1 will not show on the total revenue report until day 2
 
 design decision: we decided to store daily data about our system in a global variable accessible to other classes through getter methods to disallow any unforeseen changes to system data (encapsulation)
+
 ===========BUS TRIPS===========
 FEATURE 1
 
@@ -203,6 +203,7 @@ Notes:
 - Time cap does not apply to disjointed trips, however if time limit is reached while on the subway/bus, then users can be charged again until they reach time limit again
 
 Design Decisions: As we are using the MCV design patter, the backend of our application is represented by our System class. This is the model for our program and contains all of the private and public information pertaining to the data stored in the traffic system. To avoid any unforeseen changes to the model of our application. We wanted to avoid accessing variables directly from other classes. To do this, we used encapsulation and created getters and setters for methods that were used the most by other classes. This way, the state of the Systems variables can only be changed the way they were intended to.
+
 ===========CARDHOLDER===========
 FEATURE 1
 
@@ -249,6 +250,7 @@ Design Decisions:
 - All defined bus routes and subway stations are defined in the system class. As of right now, all subway stations are named after colours and all bus routes after animals, except where a bus route intersects a subway station.
 - If a bus route intersects a subway station, the station will be named after the name of the subway station. This is why each bus route has at least one colour on its route (each bus route must intersect the subway station at least once)
 - To add a bus route to the transit system, in the system class, simply define an array list of bus stops that intersect the subway at least one time (contains the name of at least one station) then add it to the arrayList containing all bus routes (BUS_ALL_ROUTES) and the arrayList containing all stops and stations (STOPS_AND_STATIONS) 
+
 ===========TRAVEL CARDS===========
 
 FEATURE 1
@@ -259,10 +261,3 @@ Usage Instructions: cards can be used when inputting info into the GUI (see GUI 
 
 Design Decisions:
 - Each Travel Card has a unique name, balance, and keeps track of trip information as the Cardholder is on the trip, but is cleared once the trip is completed and added to the users ArrayList of trips
-
-
-======
-
-Note: If you have design decisions that don't fit under a specific feature, but are instead relevant to multiple features, feel free to include them at the bottom of this file here.
-
-OTHER NOTES
